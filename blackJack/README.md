@@ -1,1 +1,2 @@
-#This is a simple blackjack project implemented in java
+# Blackjack
+* This is a simple blackjack project implemented in java
