@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 class  Blackjack {
 	public static void main(String [] args){
-		System.out.println("------------------------- Welcome to cse94840's casino!------------------------- ");
+		System.out.println("------------------------- Welcome to my casino!------------------------- ");
 		Scanner in = new Scanner(System.in);
 
 		System.out.print("Please state the number of the total players:  "); int num = in.nextInt();System.out.println();
