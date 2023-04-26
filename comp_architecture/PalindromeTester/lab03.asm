@@ -1,6 +1,6 @@
-# lab03.asm - Recursive palindrome string tester
+# Recursive palindrome string tester
 #   coded in  MIPS assembly using MARS
-# for MY?-505 - Computer Architecture, Fall 2021
+# for MYY-505 - Computer Architecture, Fall 2021
 # Department of Computer Science and Engineering, University of Ioannina
 
 .globl pdrome
