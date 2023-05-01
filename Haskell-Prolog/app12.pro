@@ -1,4 +1,4 @@
-% APP 11
+% APP 12
 % Given a list L= [x1, x2, . . . . , xn] of length n and a list of integers I= [i1, i2, . . . . , ik] such that 1 ≤ i1 < i2 < . . . < ik ≤ n] 
 % , we want to construct the list S= [xi1, xi2, . . . . . , xik ] (i.e. the list that is made up of the elements of L, whose positions are indicated by the elements of I).
 % Here is a program in Prolog that will perform the above construction.

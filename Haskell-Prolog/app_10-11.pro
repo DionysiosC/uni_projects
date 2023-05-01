@@ -1,4 +1,4 @@
-% APP 9
+% APP 10
 % In a vote for the best footballer of the year, n journalists vote and the winner is the one who gets more than n/2 votes. If no candidate does not get more than n/2 votes then there is no winner
 % Here is a program in Prolog which, given a list of journalists' votes, will find the winner of the vote, if any. In particular, define a predicate majority(L,X),
 % which will hold true if X appears in more positions than half of the length of the list L.
@@ -20,7 +20,7 @@ majorityHlp([Q|T],X,Z):- Q\==X, majorityHlp(T,X,Z).
 length([],X):-fail.
 length([H|T],X):- length(T,Z), X is Z+1.
 
-% APP 10
+% APP 11
 % We can add the element 0 to the end of a list L iteratively,
 % until we get a list whose length is a power of 2. We call the resulting list by this procedure a 2^n-extension of L.
 % If the length of L is a power of 2, then the 2^n-extension is L itself.
