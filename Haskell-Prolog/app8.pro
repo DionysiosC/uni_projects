@@ -12,10 +12,9 @@
 %- To process the above data, you are asked to write rules that define the following categories:
 %- * q1(C1,C2): recorded events have occurred in cities C1 and C2 on the same day (the predicate should also hold true in the case where C1=C2).
 %- * q3(S): Three different events have occurred in country S within a week (we consider a week to be the interval consisting of any 7 consecutive days).
-%- * q4(X): X has been found in cities in two different countries on days in which
-%-   events in these cities.
+%- * q4(X): X has been found in cities in two different countries on days in which events occur in these cities.
 
-%- The answers presuppose that the accusations at, event, country and dif are defined from the sentences contained in this file.
+%- The answers presuppose that the predicates at, event, country and dif are defined from the sentences contained in this file.
 
 q1(C1,C2) :- event(_,C1,Y), event(_,C2,Y).
 
