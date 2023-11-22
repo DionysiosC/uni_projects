@@ -1,5 +1,5 @@
 # uni_projects
-* The projects I've carried out so far, for my university courses
+* Some of the projects I've carried out so far, for my university courses
 * Absolutely no guarantee that everything works as intended and feel free to use the code as you wish
 # Licence
 This is free and unencumbered software released into the public domain.
