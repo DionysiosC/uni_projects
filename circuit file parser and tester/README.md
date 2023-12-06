@@ -71,7 +71,7 @@ The basic idea is described below:
 Be aware that the program is created in such fashion that the inputs of the gates can have a double value i.e. signal probability value.
 
 ## Implementation details
-The code was compiled and tested using gcc version <blah>, in Unix environment.
+The code was compiled and tested using gcc v11.2.0, in Unix environment.
 
 ## How to run the application
 To run the application after all the source code files have been compiled with the **make** file, the user has to use this format at the terminal:
