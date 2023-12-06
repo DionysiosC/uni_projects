@@ -9,7 +9,8 @@
 6. [Cost of Cube Movement](#cost-of-cube-movement)
 7. [Objective](#objective)
 8. [Visualization of Path from AK to TK](#visualization-of-path-from-ak-to-tk)
-9. [Conclusion and implementation details](#conclusion-and-implementation-details)
+9. [Heuristic Function](#heuristic-function)
+10. [Conclusion and implementation details](#conclusion-and-implementation-details)
 
 ### Introduction
 This is my project for the AI course of my uni. It was created and tested in May 2022.
@@ -102,6 +103,35 @@ c) **Number of Extensions Made:**
 
 This information provides insights into the process of finding the minimum cost sequence of actions from the initial valid formation (AK) to the final formation (TK).
 
-### Conclusion and implementation details
-The program was developed using java 15.0.2 on Windows 10, using Notepad++. The code is extensible and one day code to implement a solution using UCS will be added.
+### Heuristic Function
 
+The heuristic function for A* is defined as follows in the code:
+
+```java
+public double heuristic(Cube c) {
+    int y1 = c.getCoordinates()[1];
+    int y2 = c.getFinalPos()[1];
+    int x1 = c.getCoordinates()[0];
+    int x2 = c.getFinalPos()[0];
+
+    if (y2 == y1 && x1 == x2) {
+        return 0;
+    } else {
+        return (0.75 + 0.5 * Math.abs(y2 - y1));
+    }
+}
+```
+and is acceptable as at each step it returns an estimate of the distance to the final state less than or equal to the actual and never greater. In practice, it is a variant of the Manhattan distance .
+If the cube is in its final position, then the value of the heuristic for this position is 0. However, if the cube is not there, the value obtained by the operation: 
+
+```java
+0.75 + 0.5*Math.abs(y2-y1) 
+```
+or 
+``
+0.5+0.5*|yf-yi|
+``
+ where yf is the end line number where the cube should be located and yi is the number of the starting line where the cube should be located is returned. The addition by a factor of 0,75 is due to the horizontal movement of the cube, which must have a cost of 0,75. Multiplying by 0,5 the difference in the formula refers to the case where the cube must descend a line and the cost of this movement is certainly less than the cost of lifting it to another line.
+
+### Conclusion and implementation details
+The program was developed using java 15.0.2 on Windows 10, using Notepad++.
