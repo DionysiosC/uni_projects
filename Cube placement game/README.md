@@ -103,5 +103,5 @@ c) **Number of Extensions Made:**
 This information provides insights into the process of finding the minimum cost sequence of actions from the initial valid formation (AK) to the final formation (TK).
 
 ### Conclusion and implementation details
-The program was developed using java 15.0.2 on Windows 10, using Notepad++.
+The program was developed using java 15.0.2 on Windows 10, using Notepad++. The code is extensible and one day code to implement a solution using UCS will be added.
 
