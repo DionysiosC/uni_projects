@@ -13,7 +13,7 @@
 10. [Conclusion and implementation details](#conclusion-and-implementation-details)
 
 ## Introduction
-This is my project for the AI course of my uni. It was created and tested in May 2022.
+This is my project for the AI course of my uni. It was created and tested in May 2023.
 
 Given **N=3*K** numbered cubes (where **K** is provided by the user of the program), we want to place them in three rows (one row on top of the other) with **K** cubes in each row. The position of each cube is described by coordinates **(x, y)** where:
 
