@@ -59,7 +59,7 @@ These criteria ensure that the problem state is valid and complies with the defi
 
 ## Cube Movement
 
-A cube at position **(x, y)** is considered free if there is no cube at position **(x, y+1)**. To determine if a given cube is free in a given state, you can create a function that checks this condition.
+A cube at position **(x, y)** is considered free if there is no cube at position **(x, y+1)**. To determine if a given cube is free in a given state, a function that checks this condition is created.
 
 Any free cube at position **(x, y)** can be moved to an empty position **(x', y')**, provided that the new state resulting from the move is valid. The possible moves for a free cube include:
 
@@ -135,3 +135,8 @@ or
 
 ## Conclusion and implementation details
 The program was developed using java 15.0.2 on Windows 10, using Notepad++.
+To run after all the source code files are compiled, execute
+``
+java Main
+``
+and follow the instructions.
