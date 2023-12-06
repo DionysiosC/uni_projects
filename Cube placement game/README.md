@@ -1,5 +1,5 @@
 
-## Requirements and Documentation
+# Requirements and Documentation
 
 1. [Introduction](#introduction)
 2. [Final State](#final-state)
@@ -12,7 +12,7 @@
 9. [Heuristic Function](#heuristic-function)
 10. [Conclusion and implementation details](#conclusion-and-implementation-details)
 
-### Introduction
+## Introduction
 This is my project for the AI course of my uni. It was created and tested in May 2022.
 
 Given **N=3*K** numbered cubes (where **K** is provided by the user of the program), we want to place them in three rows (one row on top of the other) with **K** cubes in each row. The position of each cube is described by coordinates **(x, y)** where:
@@ -23,7 +23,7 @@ Given **N=3*K** numbered cubes (where **K** is provided by the user of the progr
 
 On the table (i.e., when **y=1**), there are more than **K** seats available, specifically **L=4*K**. The surplus **3*K** positions (from **K+1** to **4*K**) can be used to temporarily place some cubes outside the basic formation.
 
-### Final State
+## Final State
 
 The final state of the problem is defined as follows:
 
@@ -33,7 +33,7 @@ The final state of the problem is defined as follows:
 
 - The third row contains the cubes numbered **2K+1 to N** (in ascending order from left to right) resting on the cubes of the second row, i.e., placed in positions **(1,3) to (K,3)**.
 
-### Problem State Representation
+## Problem State Representation
 
 The problem state can be viewed as a list of **N** locations where each location contains the coordinates **(x, y)** of the corresponding cube. For example, if **K=2** (so **N=6**), the final state is:
 
@@ -41,7 +41,7 @@ The problem state can be viewed as a list of **N** locations where each location
 [(1,1), (2,1), (1,2), (2,2), (1,3), (2,3)]
 ```
 
-### Validation Criteria for Problem State
+## Validation Criteria for Problem State
 
 For a problem state to be valid:
 
@@ -57,7 +57,7 @@ b) Each cube's position must adhere to the specified constraints, ensuring that 
 
 These criteria ensure that the problem state is valid and complies with the defined constraints.
 
-### Cube Movement
+## Cube Movement
 
 A cube at position **(x, y)** is considered free if there is no cube at position **(x, y+1)**. To determine if a given cube is free in a given state, you can create a function that checks this condition.
 
@@ -69,7 +69,7 @@ Any free cube at position **(x, y)** can be moved to an empty position **(x', y'
 
 These conditions ensure that the movement of a free cube is within the constraints of a valid state and can be used to update the cube's position accordingly.
 
-### Cost of Cube Movement
+## Cost of Cube Movement
 
 The cost of moving a cube from position **(x, y)** to position **(x', y')** is determined by the following rules:
 
@@ -81,12 +81,12 @@ The cost of moving a cube from position **(x, y)** to position **(x', y')** is d
 
 These rules define the energy cost associated with different types of cube movements, taking into account whether the cube is lifted, descends, or stays in the same row.
 
-### Objective
+## Objective
 
 The objective is to determine the minimum cost sequence of actions to transition from an initial valid formation (AC) of **N** cubes to the final formation (FC) described above.
 
 
-### Visualization of Path from AK to TK
+## Visualization of Path from AK to TK
 
 During the execution of the program, the following information will be available:
 
@@ -103,7 +103,7 @@ c) **Number of Extensions Made:**
 
 This information provides insights into the process of finding the minimum cost sequence of actions from the initial valid formation (AK) to the final formation (TK).
 
-### Heuristic Function
+## Heuristic Function
 
 The heuristic function for A* is defined as follows in the code:
 
@@ -133,5 +133,5 @@ or
 ``
  where yf is the end line number where the cube should be located and yi is the number of the starting line where the cube should be located is returned. The addition by a factor of 0,75 is due to the horizontal movement of the cube, which must have a cost of 0,75. Multiplying by 0,5 the difference in the formula refers to the case where the cube must descend a line and the cost of this movement is certainly less than the cost of lifting it to another line.
 
-### Conclusion and implementation details
+## Conclusion and implementation details
 The program was developed using java 15.0.2 on Windows 10, using Notepad++.
