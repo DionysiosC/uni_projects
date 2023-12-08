@@ -79,3 +79,9 @@ To run the application after all the source code files have been compiled with t
 main <your_file_name.txt>
 ```
 The file has to be located in the same directory as the code base.
+
+If the elements in the circuit description files are not sorted, use:
+```
+main <your_file_name.txt> unordered
+```
+This is an interim solution, the automatic order detection of the elements is in the "todo" list.
