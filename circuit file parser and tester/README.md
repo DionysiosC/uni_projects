@@ -18,8 +18,8 @@ their correct order of processing.
 The file (.txt) that is entered as input describes a circuit composed of OR, AND, XOR, NAND, NOR and NOT gates. The current version supports only two inputs for each gate.
 The contents of each circuit description file are written in the format shown below:
 ```
-<gate_A> <output_A> <input1> <input2> <...>
-<gate_B> <output_B> <input3> <input4> <...>
+<gate_A> <output_A> <input1> <input2>
+<gate_B> <output_B> <input3> <input4>
 ...
 ```
 Here is an example:
@@ -32,8 +32,8 @@ AND d e f
 The other format that is supported is this:
 ```
 top_inputs <input1> <input2> <...>
-<gate_A> <output_A> <input1> <input2> <...>
-<gate_B> <output_B> <input3> <input4> <...>
+<gate_A> <output_A> <input1> <input2>
+<gate_B> <output_B> <input3> <input4> 
 ...
 ```
 where the top inputs or consequently the inputs of the circuit are explicitly defined.
