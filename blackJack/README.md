@@ -14,7 +14,7 @@ Official rules [here](https://bicyclecards.com/how-to-play/blackjack/ "Official 
 1. [Card](#card)
 2. [River](#river)
 3. [Hand](#hand)
-4. [Casino Customer](#casino-customer)
+4. [Casino Customer](#casinocustomer)
 5. [Player](#player)
 6. [Dealer](#dealer)
 7. [Round](#round)
@@ -78,6 +78,7 @@ Implements a round of the game. It fields a Dealer object, and an ArrayList of P
 1. addPlayer: takes as argument a CasinoCustomer object and creates and adds the corresponding Player to the players at the table.
 2. playRound: implements the base game. Initially, all players bet. Then the dealer deals one of the cards. card to each player, and draws one for him. We print the dealer's hand to see the dealer's hand. his face-up card. The dealer then deals a second card to each player and draws one for each player. for him. We print the players' hands. We check to see if the dealer has blackjack. If he does, he collects the money. from the players who don't have blackjack and the round ends. If he doesn't have blackjack the dealer looks at each player individually. If the player has blackjack, the dealer pays 1.5 times the bet. If not, he must play the player. For this purpose it is convenient to do auxiliary methods. 
 #### Auxiliary methods:
+
 a. playNormalHand: implements the classic case where the player draws until he decides to stop. If he gets burned he loses and pays the bet.
 b. playDoubledHand: implements the game when the player makes a double.
 c. playSplitHand: implements when the player splits. Creates two new Player objects for each of the new hands (with the same bet and client) and calls playNormalHand for each.
