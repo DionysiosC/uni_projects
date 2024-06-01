@@ -93,7 +93,7 @@ Here is the grammar of the cpy language:
 >**expression      :**   optional_sign term ( add_oper term )*
                 ;
 
->**term            : **  factor ( mul_oper factor )*
+>**term            :**  factor ( mul_oper factor )*
                 ;
 	    
 >**factor          :**   INTEGER
