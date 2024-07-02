@@ -156,4 +156,4 @@ The program, like every other project I completed in the context of my uni cours
 Other than that, some known issues happen with nested function declarations and the compiler does not handle global variables very well. In the repository, you can find two .'cpy' files that this compiler compiles successfully.
 To use this compiler, you must open a cmd (or bash in Linux) and use this syntax:
 `python cpy_compiler.py <your_program>.cpy`
-Then, if no errors occur, you will find three new files in the current directory. Their titles are explanatory. Feel free to test the quality of this compiler by assembling the final code using a RISC-V runtime simulator (the obvious choice must be [RARS](https://github.com/TheThirdOne/rars))
+Then, if no errors occur, you will find three new files in the current directory. Their titles are explanatory. Feel free to test the quality of this compiler by assembling the final code using a RISC-V runtime simulator (the obvious choice must be [RARS](https://github.com/TheThirdOne/rars)).
