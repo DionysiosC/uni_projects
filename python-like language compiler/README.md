@@ -11,7 +11,7 @@
 ## Introduction
 Here we have a compiler program written by me, using Python 3.12.2, in 2024, in the context of the compilers course of the dpt. of computer science and engineering in the University of Ioannina. The compiler does not use any optimization and is created to compile (most of the time!) any program written in a python-like language called 'cpy'. It is a language that is accompanied by a small grammar and a small set of key-words. A small analysis of this language is given in this file. Last but not least, the compiler creates three files after being run: one that contains a form of the intermediate code created and used by it, one that contains the symbol tables (the bottom one is the latest) and one that contains the final code (assembly) that targets the [RISC-V](https://riscv.org/) processor ISA.
 ## The cpy language
-The cpy language is an educational language created by the professor of the course. The most basic characteristics of this language must be four: it does not support any 'for' loop, it supports only integer ('int') type values and variables, the user needs to declare each variable using the '#int' keyword and every variable is passed to each function by value only ('cv'). Other than some other small differences, the language looks a lot like Python in terms of syntax and key-words. In fact, any program written using cpy should be able to be compiled by a Python interpreter without any problems. One other major difference is the no need to use indentations (as we use in python).
+The cpy language is an educational language created by the professor of the course. The most basic characteristics of this language must be four: it does not support any 'for' loop, it supports only integer ('int') type values and variables, the user needs to declare each variable using the '#int' keyword and every variable is passed to each function by value only ('cv'). Other than some other small differences, the language looks a lot like Python in terms of syntax and key-words. In fact, any program written using cpy should be able to be used with a Python interpreter without any problems. One other major difference is the no need to use indentations (as we use in python).
 Here is the grammar of the cpy language:                
 >**program       :**     declarations functions main
                 ;
@@ -93,7 +93,7 @@ Here is the grammar of the cpy language:
 >**expression      :**   optional_sign term ( add_oper term )*
                 ;
 
->**term            : **  factor ( mul_oper factor )*
+>**term            :**  factor ( mul_oper factor )*
                 ;
 	    
 >**factor          :**   INTEGER

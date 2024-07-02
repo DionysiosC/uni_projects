@@ -15,4 +15,4 @@ def max3(x,y,z):
 a =3
 b=15
 c=2
-r = max3(b)
+r = max3(a,b,c)
